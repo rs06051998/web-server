@@ -6,6 +6,7 @@ const geometry = require('./geocode')
 const wheather = require('./forcast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Setting the Path
 const h = path.join( __dirname,'../public')
@@ -101,7 +102,7 @@ app.get('*',(req,res)=>
 })
 
 
-app.listen(3003,()=>
+app.listen(port,()=>
 {
     console.log('Web server is running')
 })
